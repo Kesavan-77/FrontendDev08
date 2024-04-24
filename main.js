@@ -63,15 +63,20 @@ function deleteCart(){
 }
 
 
-let curr = 0;
-const slides = document.getElementsByClassName('slide');
-const total = slides.length;
-const slider = document.getElementById('slider');
+var slideIndex = 1;
+showDivs(slideIndex);
 
-function changeSlide(offset){
-    curr = (curr + offset + total) % total;
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-    const position = -curr * 100;
-
-    slider.style.transform = `translateX(${position}%)`;
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
 }
