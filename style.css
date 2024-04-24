@@ -23,6 +23,7 @@ body{
     margin-right: 10%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .navbar{
@@ -116,7 +117,7 @@ hr{
     gap: 1rem;
 }
 
-.cart-page img{
+.cart-page .cart{
     cursor: pointer;
 }
 
@@ -332,6 +333,7 @@ hr{
         align-items: start;
         justify-content: center;
         width: 100%;
+        margin-bottom: 1rem;
     }
     .navbar{
         display: flex;
